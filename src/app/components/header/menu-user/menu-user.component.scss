@@ -1,0 +1,27 @@
+* {
+    --color-menu-user: yellowgreen;
+}
+
+.content__user {
+    position: relative;
+    .icon__user {
+        margin-right: 50px;
+    }
+    .login {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: -9999px;
+        &__item {
+            cursor: pointer;
+            padding: 10px;
+        }
+        &--active {
+            background: var(--color-menu-user);
+            right: 0px;
+            top: 35px;
+            width: 150px;
+        }
+    }
+}

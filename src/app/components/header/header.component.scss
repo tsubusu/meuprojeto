@@ -1,0 +1,31 @@
+* {
+    --color-menu: aqua;
+}
+
+.header {
+    background: var(--color-header);
+    display: flex;
+    height: 50px;
+    position: relative;
+    .icon {
+        align-self: center;
+        margin-left: 50px;
+    }
+    .menu {
+        background: var(--color-menu);
+        height: 100vh;
+        left: -9999px;
+        position: absolute;
+        transition: 300ms;
+        width: 20%;
+        &--active {
+            left: 0;
+            transition: 300ms;
+        }
+    }
+    .login {
+        align-self: center;
+        position: absolute;
+        right: 0;
+    }
+}

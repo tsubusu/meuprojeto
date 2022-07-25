@@ -1,0 +1,6 @@
+<div class="header">
+    <fa-icon class="icon" [icon]="icons.faBars" (click)="showMenu()" (keyup)="showMenu()"></fa-icon>
+    <app-menu-item class="menu" [ngClass]="{'menu--active': menuActive}" (click)="showMenu()"></app-menu-item>
+
+    <app-menu-user class="login"></app-menu-user>
+</div>

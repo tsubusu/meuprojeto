@@ -1,0 +1,13 @@
+<div class="content__user">
+    <div class="icon__user">
+        <button id="icon-menu" type="button" (click)="showUser()">
+            <fa-icon [icon]="icons.faUserAstronaut"></fa-icon>
+        </button>
+        <label for="icon-menu">User</label>
+    </div>
+
+    <ul class="login" (click)="showUser()" [ngClass]="{'login--active': userActive}">
+        <li class="login__item" [routerLink]="['user/login']">Sign in</li>
+        <li class="login__item" [routerLink]="['user/user-register']">Sign up</li>
+    </ul>
+</div>

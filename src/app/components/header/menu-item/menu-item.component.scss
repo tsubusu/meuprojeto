@@ -1,0 +1,19 @@
+* {
+    --color-border: white;
+}
+
+h2 {
+    border-bottom: 1px solid var(--color-border);
+    padding: 14px;
+    text-align: center;
+}
+
+.menu {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    &__item {
+        cursor: pointer;
+        padding: 10px;
+    }
+}
