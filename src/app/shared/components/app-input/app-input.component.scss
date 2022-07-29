@@ -1,0 +1,11 @@
+:host {
+    .label__red {
+        color: red;
+    }
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}

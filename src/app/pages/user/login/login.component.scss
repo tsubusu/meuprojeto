@@ -2,4 +2,14 @@
 
 .login {
     @include calcHeigthContainer;
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
 }
+
+form {
+    margin-top: 50px;
+    position: absolute;
+    width: 100%;
+}
+

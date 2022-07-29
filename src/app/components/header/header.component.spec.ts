@@ -5,6 +5,7 @@ import { HeaderModule } from './header.module';
 import { RouterModule } from '@angular/router';
 import { SharedModule } from '@shared/shared.module';
 import { RouterTestingModule } from '@angular/router/testing';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 describe('HeaderComponent', () => {
   let component: HeaderComponent;
@@ -12,7 +13,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ HeaderModule, RouterTestingModule.withRoutes([]), SharedModule ],
+      imports: [ HeaderModule, RouterTestingModule.withRoutes([]) ],
       providers: [RouterModule]
     })
     .compileComponents();

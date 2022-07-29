@@ -7,6 +7,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 @NgModule({
   declarations: [],
   imports: [
+    AppInputModule,
+    ReactiveFormsModule,
+    FormsModule,
+    CommonModule,
+    FontAwesomeModule
   ],
   exports:[
     AppInputModule,

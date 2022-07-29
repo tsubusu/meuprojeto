@@ -1,11 +1,13 @@
 <div class="container login">
     <form [formGroup]="form" (ngSubmit)="submit()">
-        <app-app-input>
-            <input formControlName="userName" type="text">
+        <app-app-input [ariaLabel]="'Input for user name'" formControlName="userName" [label]="'User name: '" [idLabel]="idUserName">
+            <input formControlName="userName" class="form__group__control" type="text" [id]="idUserName">
         </app-app-input>
 
-        <app-app-input>
-            <input formControlName="password" type="text">
+        <app-app-input [ariaLabel]="'Input for password'" formControlName="password" [label]="'Password: '" [idLabel]="idPassword">
+            <input formControlName="password" [ngClass]="{'input__error': this.form.get('password')?.errors}" class="form__group__control" type="text" [id]="idPassword">
         </app-app-input>
+
+        <button>Submit</button>
     </form>
 </div>

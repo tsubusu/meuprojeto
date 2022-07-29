@@ -1,1 +1,7 @@
-<p>app-input works!</p>
+<div class="input form__group">
+    <label [ngClass]="{'label__red': formControl?.errors}" [attr.lang]="lang" [attr.aria-label]="ariaLabel" [attr.for]="idLabel">{{ label }}</label>
+    <ng-content></ng-content>
+    <div *ngIf="shouldShowErrors()">
+        <label [ngClass]="{'label__red': formControl?.errors}" *ngFor="let error of listOfErrors()"> {{ error }} </label>
+    </div>
+</div>
