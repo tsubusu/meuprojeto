@@ -1,3 +1,34 @@
 <div class="container user__register">
+    <h1 class="">Registre-se e mostre seu pet ao mundo!</h1>
+    <form [formGroup]="form" (ngSubmit)="submit()">
+        <app-app-input [ariaLabel]="'Input for user email'" formControlName="email" [label]="'Email: '"
+            [idLabel]="idsForInputs?.idEmail">
+            <input formControlName="email" class="form__group__control" [attr.aria-describedby]="idsForInputs?.idEmail + 'error'" 
+            [ngClass]="{'input__error': this.form.get('email')?.errors}" type="email" [id]="idsForInputs?.idEmail">
+        </app-app-input>
 
+        <app-app-input [ariaLabel]="'Input for user name'" formControlName="userName" [label]="'User name: '"
+            [idLabel]="idsForInputs?.idUserName">
+            <input formControlName="userName" class="form__group__control" [attr.aria-describedby]="idsForInputs?.idUserName + 'error'"
+            [ngClass]="{'input__error': this.form.get('userName')?.errors}" type="text" [id]="idsForInputs?.idUserName">
+        </app-app-input>
+
+        <app-app-input [ariaLabel]="'Input for password'" formControlName="password" [label]="'Password: '"
+            [idLabel]="idsForInputs?.idPassword">
+            <input formControlName="password" [ngClass]="{'input__error': this.form.get('password')?.errors}"
+                class="form__group__control" type="text" [id]="idsForInputs?.idPassword" [attr.aria-describedby]="idsForInputs?.idPassword + 'error'">
+        </app-app-input>
+
+        <app-app-input [ariaLabel]="'Input for confirme password'" formControlName="confirmPassword" [label]="'Confirme password: '"
+            [idLabel]="idsForInputs?.idConfirmePassord">
+            <input formControlName="confirmPassword" class="form__group__control" [attr.aria-describedby]="idsForInputs?.idConfirmePassord + 'error'"
+            [ngClass]="{'input__error': this.form.get('confirmPassword')?.errors}" type="text" [id]="idsForInputs?.idConfirmePassord">
+        </app-app-input>
+
+        <div *ngIf="form?.hasError('confirmPassword') && form.get('confirmPassword')?.touched">
+            <label [attr.aria-invalid]="form?.hasError('confirmPassword')" [attr.id]="idsForInputs?.idConfirmePassord + 'error'" for="idsForInputs?.idConfirmePassord"> 'Senhas devem ser iguais' </label>
+        </div>
+
+        <input role="button" [attr.aria-disabled]="form.invalid"  type="button" [readonly]="form.invalid" value="Submit"> 
+    </form>
 </div>

@@ -2,6 +2,8 @@
     <label [ngClass]="{'label__red': formControl?.errors}" [attr.lang]="lang" [attr.aria-label]="ariaLabel" [attr.for]="idLabel">{{ label }}</label>
     <ng-content></ng-content>
     <div *ngIf="shouldShowErrors()">
-        <label [ngClass]="{'label__red': formControl?.errors}" *ngFor="let error of listOfErrors()"> {{ error }} </label>
+        <span [ngClass]="{'label__red': formControl?.errors}" *ngFor="let error of listOfErrors()" 
+        [attr.aria-invalid]="!!error" aria-live="true" aria-atomic="true"
+        [attr.id]="idLabel + 'error'"> {{ error }} </span>
     </div>
 </div>

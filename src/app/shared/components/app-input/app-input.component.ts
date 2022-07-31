@@ -66,6 +66,7 @@ export class AppInputComponent implements OnInit {
   }
 
   private getMessage(type: string, params: any): string {
+    if (type && type === 'operator' || type === 'source') { return ''; }
     return AppInputComponent.errorMessages[type](params);
   }
 
@@ -79,6 +80,8 @@ export class AppInputComponent implements OnInit {
     'min' : (params: any) => 'O valor mínimo é ' + params.min,
     'max' : (params: any) => 'O valor máximo é ' + params.max,
     'matDatepickerParse': () => 'Data com formato inválido',
+    'email': () => 'Email não é valido',
+    'userExists': () => 'Usuario ja existe',
     'texto': (params: any) => params
   };
 }
