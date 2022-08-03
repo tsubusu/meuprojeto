@@ -26,7 +26,7 @@
         </app-app-input>
 
         <div *ngIf="form?.hasError('confirmPassword') && form.get('confirmPassword')?.touched">
-            <label [attr.aria-invalid]="form?.hasError('confirmPassword')" [attr.id]="idsForInputs?.idConfirmePassord + 'error'" for="idsForInputs?.idConfirmePassord"> 'Senhas devem ser iguais' </label>
+            <label [attr.aria-invalid]="form.hasError('confirmPassword')" [attr.id]="idsForInputs?.idConfirmePassord + 'error'" for="idsForInputs?.idConfirmePassord"> 'Senhas devem ser iguais' </label>
         </div>
 
         <input role="button" [attr.aria-disabled]="form.invalid"  type="button" [readonly]="form.invalid" value="Submit"> 
