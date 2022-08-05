@@ -3,11 +3,17 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderModule } from './components/header/header.module';
 import { FooterModule } from './components/footer/footer.module';
+import { LoggingInterceptor } from './interceptors/logging-interceptor';
 
+const httpInterceptorProviders = {
+  provide: HTTP_INTERCEPTORS,
+  useClass: LoggingInterceptor,
+  multi: true
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +28,9 @@ import { FooterModule } from './components/footer/footer.module';
     HeaderModule,
     FooterModule,
   ],
-  providers: [],
+  providers: [
+    httpInterceptorProviders
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

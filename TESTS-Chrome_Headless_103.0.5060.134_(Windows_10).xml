@@ -1,29 +1,36 @@
 <?xml version="1.0"?>
-<testsuite name="Chrome Headless 103.0.5060.134 (Windows 10)" package="" timestamp="2022-08-02T23:34:12" id="0" hostname="DESKTOP-8V7GQKG" tests="19" errors="0" failures="0" time="0.174">
+<testsuite name="Chrome Headless 103.0.5060.134 (Windows 10)" package="" timestamp="2022-08-03T01:06:32" id="0" hostname="DESKTOP-8V7GQKG" tests="23" errors="0" failures="0" time="0.139">
   <properties>
     <property name="browser.fullName" value="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/103.0.5060.134 Safari/537.36"/>
   </properties>
-  <testcase name="HeaderComponent should create" time="0.091" classname="Chrome_Headless_103_0_5060_134_(Windows_10).HeaderComponent"/>
-  <testcase name="HomeComponent should create" time="0.005" classname="Chrome_Headless_103_0_5060_134_(Windows_10).HomeComponent"/>
-  <testcase name="MenuUserComponent should create" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).MenuUserComponent"/>
-  <testcase name="UserService should be created" time="0.003" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UserService"/>
-  <testcase name="LoginComponent should create" time="0.014" classname="Chrome_Headless_103_0_5060_134_(Windows_10).LoginComponent"/>
-  <testcase name="MenuItemComponent should create" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).MenuItemComponent"/>
-  <testcase name="UserRegisterComponent should create" time="0.008" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UserRegisterComponent"/>
-  <testcase name="AppInputComponent should be false shouldShowErrors when exists errors and form control is touched" time="0.003" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
-  <testcase name="AppInputComponent should contain a empty text listOfErrors when form control is operator" time="0.003" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
+  <testcase name="FooterComponent should create" time="0.053" classname="Chrome_Headless_103_0_5060_134_(Windows_10).FooterComponent"/>
+  <testcase name="AppComponent should contain the app-header" time="0.011" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppComponent"/>
+  <testcase name="AppComponent should contain the app-footer" time="0.005" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppComponent"/>
+  <testcase name="AppComponent should create the app" time="0.003" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppComponent"/>
+  <testcase name="UserService should be created" time="0.001" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UserService"/>
+  <testcase name="UserService &#xA;   Should work custom validation when called" time="0.002" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UserService"/>
+  <testcase name="MenuItemComponent should create" time="0.006" classname="Chrome_Headless_103_0_5060_134_(Windows_10).MenuItemComponent"/>
+  <testcase name="HeaderComponent should create" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).HeaderComponent"/>
+  <testcase name="MenuUserComponent should create" time="0.003" classname="Chrome_Headless_103_0_5060_134_(Windows_10).MenuUserComponent"/>
+  <testcase name="LoginComponent LoginComponent should create" time="0.01" classname="Chrome_Headless_103_0_5060_134_(Windows_10).LoginComponent"/>
+  <testcase name="LoginComponent ngOnInit &#xA;  Should create form when called" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).LoginComponent"/>
+  <testcase name="LoginComponent ngOnInit &#xA;  Should generate Id For All Input when called" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).LoginComponent"/>
+  <testcase name="LoginComponent (D) Should return values in form when submited" time="0.006" classname="Chrome_Headless_103_0_5060_134_(Windows_10).LoginComponent"/>
+  <testcase name="HomeComponent should create" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).HomeComponent"/>
+  <testcase name="UserRegisterComponent should create" time="0.007" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UserRegisterComponent"/>
+  <testcase name="AppInputComponent should contain a empty text listOfErrors when form control is operator" time="0.002" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
   <testcase name="AppInputComponent should be false shouldShowErrors when form control is null" time="0.002" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
   <testcase name="AppInputComponent should be null listOfErrors when form control null" time="0.002" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
   <testcase name="AppInputComponent should contain a text listOfErrors when form control is required" time="0.002" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
-  <testcase name="AppInputComponent should create" time="0.005" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
-  <testcase name="UniqueIdService should be created" time="0.001" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UniqueIdService"/>
-  <testcase name="FooterComponent should create" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).FooterComponent"/>
-  <testcase name="UserComponent should create" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UserComponent"/>
-  <testcase name="AppComponent should contain the app-footer" time="0.009" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppComponent"/>
-  <testcase name="AppComponent should create the app" time="0.004" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppComponent"/>
-  <testcase name="AppComponent should contain the app-header" time="0.006" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppComponent"/>
+  <testcase name="AppInputComponent should create" time="0.002" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
+  <testcase name="AppInputComponent should be false shouldShowErrors when exists errors and form control is touched" time="0.003" classname="Chrome_Headless_103_0_5060_134_(Windows_10).AppInputComponent"/>
+  <testcase name="UniqueIdService should be created" time="0" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UniqueIdService"/>
+  <testcase name="UserComponent should create" time="0.003" classname="Chrome_Headless_103_0_5060_134_(Windows_10).UserComponent"/>
   <system-out>
-    <![CDATA[
+    <![CDATA[Chrome Headless 103.0.5060.134 (Windows 10) LOG: FormGroup{_pendingDirty: false, _hasOwnPendingAsyncValidator: false, _pendingTouched: false, _onCollectionChange: () => this._updateDomValue(), _parent: null, pristine: false, touched: false, _onDisabledChange: [], _rawValidators: null, _rawAsyncValidators: null, _composedValidatorFn: null, _composedAsyncValidatorFn: null, controls: Object{userName: FormControl{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _parent: ..., pristine: ..., touched: ..., _onDisabledChange: ..., _rawValidators: ..., _rawAsyncValidators: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., defaultValue: ..., _onChange: ..., _pendingChange: ..., _pendingValue: ..., value: ..., valueChanges: ..., statusChanges: ..., status: ..., errors: ...}, password: FormControl{_pendingDirty: ..., _hasOwnPendingAsyncValidator: ..., _pendingTouched: ..., _onCollectionChange: ..., _parent: ..., pristine: ..., touched: ..., _onDisabledChange: ..., _rawValidators: ..., _rawAsyncValidators: ..., _composedValidatorFn: ..., _composedAsyncValidatorFn: ..., defaultValue: ..., _onChange: ..., _pendingChange: ..., _pendingValue: ..., value: ..., valueChanges: ..., statusChanges: ..., status: ..., errors: ...}}, valueChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false}, statusChanges: EventEmitter_{closed: false, currentObservers: [], observers: [], isStopped: false, hasError: false, thrownError: null, __isAsync: false}, status: 'VALID', value: Object{userName: '22', password: '22'}, errors: null}
+,Chrome Headless 103.0.5060.134 (Windows 10) LOG: false
+,Chrome Headless 103.0.5060.134 (Windows 10) LOG: Object{userName: '22', password: '22'}
+
 ]]>
   </system-out>
   <system-err/>

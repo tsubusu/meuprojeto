@@ -10,6 +10,7 @@
     "teste-common": "ng test --browsers Chrome,Firefox",
     "test-ci": "ng test --watch=false --reporters junit --browsers ChromeHeadless,FirefoxSemCabeca",
     "test-coverage": "ng test --source-map=true  --code-coverage=true --watch=false --browsers ChromeHeadless",
+    "test-headless": "ng test --code-coverage=true --watch=false --reporters junit --browsers ChromeHeadless",
     "api": "node ./server/server.js",
     "all": "concurrently --kill-others \"npm run api\" \"npm run start\""
   },

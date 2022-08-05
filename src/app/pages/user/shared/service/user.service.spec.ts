@@ -24,7 +24,7 @@ describe('UserService', () => {
 
   it(`${UserService.prototype.existsUserName().name}
    Should work custom validation when called`, done => {
-    let control = { value: '6' }  
+    let control = { value: '6' }
     let result: any = service.existsUserName()(control as AbstractControl);
 
     result

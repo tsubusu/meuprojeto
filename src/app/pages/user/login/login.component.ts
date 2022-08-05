@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { UniqueIdService } from '@shared/services/unique-id/unique-id.service';
+import { catchError, Observable, of } from 'rxjs';
+import { UserService } from '../shared/service/user.service';
 
 @Component({
   selector: 'app-login',
@@ -12,8 +14,11 @@ export class LoginComponent implements OnInit {
   public idUserName = '';
   public idPassword = '';
 
+  public logs$!: Observable<any>;
+
   constructor(private formBuilder: FormBuilder,
       private uniqueIdService: UniqueIdService,
+      private userService: UserService,
     ) { }
 
   public ngOnInit(): void {
@@ -39,7 +44,31 @@ export class LoginComponent implements OnInit {
     this.idPassword = this.uniqueIdService.generateUniqueIDWithPrefix('login-password');
   }
 
-  teste(event: any) {
-    console.log(event)
+  public teste() {
+    this.userService.getData()
+    .pipe(
+      catchError(x => {
+        console.log(x);
+
+        return of(x);
+      })
+    )
+    .subscribe(
+      () => {},
+      error => {
+        console.log(error)
+      },
+      () => {
+        console.log('x')
+      }
+    );
+  }
+
+  public teste2() {
+    this.userService.getDataUrl().subscribe();
+  }
+
+  public showLog() {
+    this.logs$ = this.userService.logs;
   }
 }

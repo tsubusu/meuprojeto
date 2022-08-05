@@ -10,4 +10,23 @@
 
         <button>Submit</button>
     </form>
+
+    <div class="button__tests">
+      <div>
+        <button (click)="teste()">teste error</button>
+      </div>
+
+      <div>
+        <button (click)="teste2()">teste success</button>
+      </div>
+
+      <div>
+        <button (click)="showLog()">teste show logs</button>
+      </div>
+
+      <div *ngIf="logs$ | async as log">
+        <pre>{{log | json}}</pre>
+      </div>
+    </div>
+
 </div>
